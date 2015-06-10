@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -70,9 +71,74 @@ public class SimpleAudioPlayerJunit
 	        
 	    }
 
-	   
 	@Test
 	public void testHomeWork1() throws Exception
+	{
+			Scanner scanner = new Scanner(System.in);
+			
+			// String input;
+			
+			System.out.print("Hey, who the hack are you? \n");
+			
+			
+			// First way
+			// input = scanner.nextLine();
+			
+			// if(input.equals("I am AJ")) {
+					//	System.out.print("Well, hello, AJ!");
+					//} else if(input.equals("AJ")) {
+					//	System.out.print("Well, hello, ");
+					//	System.out.print (input);
+					//	System.out.print ("!");
+					//} else {
+					//	System.out.print("Doesn't work");
+					//}
+					
+			// Second way	
+			// String input1 = scanner.next();
+			// String input2 = scanner.next();
+			// String input3 = scanner.next();
+				
+			// if (input3.equals("AJ")) {
+				// System.out.print("Well, hello, ");
+				// System.out.print(input3);
+				// System.out.print("!");
+			//} else if(input1.equals("AJ")) {
+			//	System.out.print("Well, hello, ");
+			//	System.out.print(input1);
+			//	System.out.print("!");
+			//} else {
+				//	System.out.print("Doesn't work");
+			//	}
+
+			
+			String input = scanner.nextLine();
+			
+			// while(!scanner.next().isEmpty()) {
+				
+			String[] pieces = input.split("\\s+");
+			// Parse the pieces
+			String piece1 = pieces[0];
+			String piece2 = pieces[1];
+			String piece3 = pieces[2];
+			
+			if (piece3.equals("AJ")) {
+				System.out.print("Well, hello, ");
+				System.out.print(piece3);
+				System.out.print("!");
+			} else if(piece1.equals("AJ")) {
+				System.out.print("Well, hello, ");
+				System.out.print(piece1);
+				System.out.print("!");
+			} else {
+				System.out.print("Doesn't work");
+			}
+			
+			// }
+	}
+	
+	@Test
+	public void testHomeWork2() throws Exception
 	{   
 		
 
@@ -108,7 +174,7 @@ public class SimpleAudioPlayerJunit
 		try
 		{
 			audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-			System.out.println("Playing Sound");
+			System.out.println("\nPlaying SoundFile");
 		}
 		catch (Exception e)
 		{
@@ -228,13 +294,13 @@ public class SimpleAudioPlayerJunit
 		  All data are played. We can close the shop.
 		*/
 		line.close();
-		System.out.println("All Song Data Played");
+		System.out.println("SoundFile Played");
 		/*
 		  There is a bug in the jdk1.3/1.4.
 		  It prevents correct termination of the VM.
 		  So we have to exit ourselves.
 		*/
-		System.exit(0);
+		// System.exit(0);
 	}
 
 	
@@ -251,6 +317,9 @@ public class SimpleAudioPlayerJunit
 //		System.out.println(strMessage);
 //	}
 
+//	}
+	
+	
 @After
 public void tearDown() throws Exception{
 //closeBrowser;
