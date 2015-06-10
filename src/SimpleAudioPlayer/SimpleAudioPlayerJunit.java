@@ -295,6 +295,7 @@ public class SimpleAudioPlayerJunit
 		*/
 		line.close();
 		System.out.println("SoundFile Played");
+		System.out.println("Code Formatted in Junit b*atches");
 		/*
 		  There is a bug in the jdk1.3/1.4.
 		  It prevents correct termination of the VM.
