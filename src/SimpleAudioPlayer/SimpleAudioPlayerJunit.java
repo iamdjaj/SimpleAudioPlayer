@@ -228,7 +228,7 @@ public class SimpleAudioPlayerJunit
 		  All data are played. We can close the shop.
 		*/
 		line.close();
-		System.out.println("line close");
+		System.out.println("All Song Data Played");
 		/*
 		  There is a bug in the jdk1.3/1.4.
 		  It prevents correct termination of the VM.
@@ -255,6 +255,7 @@ public class SimpleAudioPlayerJunit
 public void tearDown() throws Exception{
 //closeBrowser;
 //other cleanups
+}
 }
 
 /*** SimpleAudioPlayer.java ***/
